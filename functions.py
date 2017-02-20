@@ -91,18 +91,18 @@ def command_support(m):
     bot.send_message(m.chat.id, "Choose an option:", reply_markup=markup)
 
 
-#@bot.message_handler(commands=['blog'])
-#def command_blog(m):
-#    cid = m.chat.id
-#    busqueda = 'URL HERE'    
-#    if len(m.text.split()) >= 2:
-#        palabras = m.text.split()
-#        palabras.pop(0)
-#        a_buscar = '+'.join(palabras)
-#        url = (busqueda % a_buscar)
-#        bot.send_message(cid, get_feed(url),disable_web_page_preview=True,parse_mode="markdown")
-#    else:
-#        bot.send_message( cid, "Missing Argument" )
+@bot.message_handler(commands=['blog'])
+def command_blog(m):
+    cid = m.chat.id
+    busqueda = 'http://www.kdeblog.com/search/%s/feed/rss'    
+    if len(m.text.split()) >= 2:
+        palabras = m.text.split()
+        palabras.pop(0)
+        a_buscar = '+'.join(palabras)
+        url = (busqueda % a_buscar)
+        bot.send_message(cid, get_feed(url),disable_web_page_preview=True,parse_mode="markdown")
+    else:
+        bot.send_message( cid, "Missing Argument" )
 
 @bot.message_handler(commands=['feed'])
 def command_feed(m):
