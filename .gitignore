@@ -1,4 +1,4 @@
-.pyc
+*.pyc
 token.py
 user.py
 owners.py
