@@ -72,7 +72,7 @@ def command_left_user(m):
 @bot.message_handler(commands=['help'])
 def command_ayuda(m):
     cid = m.chat.id
-    bot.send_message( cid, "Comandos Disponibles:\n /blog\n /neofeed\n /manjarofeed\n /kdefeed\n /id\n /mirrors\n /keys\n /update\n /orphans\n /listpkg\n /last_update_changes\n /virtualbox\n /youtubedl\n /mpis\n /github\n /about\n /support\n /isos\n /help\n") #
+    bot.send_message( cid, "Comandos Disponibles:\n /feed\n /kdefeed\n /about\n /support\n /help\n") #
 
 @bot.message_handler(commands=['about'])
 def command_about(m):
