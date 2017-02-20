@@ -87,3 +87,8 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+*.pyc
+token.py
+user.py
+owners.py
